@@ -6,43 +6,39 @@
   .text-balance {
     text-wrap: balance;
   }
+  .text-pretty {
+    text-wrap: pretty;
+  }
 }
 
 @layer base {
   :root {
-    --background: 30 15% 96%;
-    --foreground: 220 15% 12%;
-    --card: 30 12% 93%;
-    --card-foreground: 220 15% 12%;
-    --popover: 30 15% 96%;
-    --popover-foreground: 220 15% 12%;
-    --primary: 220 15% 12%;
-    --primary-foreground: 30 15% 96%;
-    --secondary: 30 8% 88%;
-    --secondary-foreground: 220 15% 12%;
-    --muted: 30 8% 88%;
-    --muted-foreground: 220 8% 46%;
-    --accent: 174 55% 42%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84.2% 60.2%;
+    /* Premium dark game-publisher palette */
+    --background: 222 33% 6%;
+    --foreground: 210 30% 96%;
+    --card: 222 28% 9%;
+    --card-foreground: 210 30% 96%;
+    --popover: 222 30% 8%;
+    --popover-foreground: 210 30% 96%;
+    --primary: 168 78% 48%;
+    --primary-foreground: 222 40% 6%;
+    --secondary: 222 22% 14%;
+    --secondary-foreground: 210 30% 96%;
+    --muted: 222 20% 13%;
+    --muted-foreground: 215 18% 62%;
+    --accent: 38 95% 58%;
+    --accent-foreground: 222 40% 6%;
+    --destructive: 0 72% 56%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 10% 84%;
-    --input: 30 10% 84%;
-    --ring: 174 55% 42%;
-    --chart-1: 174 55% 42%;
-    --chart-2: 220 15% 12%;
-    --chart-3: 30 8% 88%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 20% 16%;
+    --input: 220 20% 16%;
+    --ring: 168 78% 48%;
+    --chart-1: 168 78% 48%;
+    --chart-2: 38 95% 58%;
+    --chart-3: 210 90% 60%;
+    --chart-4: 280 65% 65%;
+    --chart-5: 340 75% 60%;
+    --radius: 0.75rem;
   }
 }
 
@@ -52,8 +48,45 @@
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
   }
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image: linear-gradient(to right, hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .text-gradient {
+    background: linear-gradient(120deg, hsl(var(--foreground)), hsl(var(--primary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .marquee-track {
+    animation: marquee 40s linear infinite;
+  }
+  .marquee-track-rev {
+    animation: marquee-rev 50s linear infinite;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes marquee-rev {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 }

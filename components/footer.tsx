@@ -1,43 +1,55 @@
-const footerLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Workflow", href: "#workflow" },
-  { label: "Contact", href: "#contact" },
-]
+import { NAV_LINKS } from "@/lib/site-data"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-primary py-12">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+    <footer className="border-t border-border bg-card">
+      <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
+        <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
-            <p className="font-heading text-lg font-bold tracking-tight text-primary-foreground">
-              ESIGAME
-            </p>
-            <p className="mt-1 text-sm text-primary-foreground/50">
-              ESIGAME PTE. LTD. &middot; Singapore
+            <div className="flex items-center gap-2.5">
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary font-heading text-lg font-bold text-primary-foreground">
+                E
+              </span>
+              <span className="font-heading text-lg font-bold tracking-tight">Esigame</span>
+            </div>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
+              Global game publisher specializing in China publishing, TikTok, WeChat, and Douyin
+              Mini Games, and native mobile titles.
             </p>
           </div>
 
-          <nav>
-            <ul className="flex flex-wrap items-center justify-center gap-6">
-              {footerLinks.map((link) => (
+          <div>
+            <h4 className="text-sm font-semibold text-foreground">Navigate</h4>
+            <ul className="mt-4 flex flex-col gap-3">
+              {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-primary-foreground/60 transition-colors hover:text-primary-foreground"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
-          </nav>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-foreground">Offices</h4>
+            <ul className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground">
+              <li>Beijing — Headquarters</li>
+              <li>Singapore — APAC Hub</li>
+              <li>Los Angeles — Americas</li>
+            </ul>
+          </div>
         </div>
 
-        <div className="mt-10 border-t border-primary-foreground/10 pt-6 text-center">
-          <p className="text-xs text-primary-foreground/40">
-            {"© 2026 ESIGAME PTE. LTD. All rights reserved."}
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:flex-row">
+          <p className="text-xs text-muted-foreground">
+            © 2026 Esigame. All rights reserved.
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Founded 2019 · Beijing · Singapore · Los Angeles
           </p>
         </div>
       </div>
