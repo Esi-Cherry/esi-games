@@ -5,9 +5,9 @@ import { ArrowRight, CalendarDays } from "lucide-react"
 import { HERO_STATS, GAMES } from "@/lib/site-data"
 import { CountUp } from "@/components/count-up"
 
-const columnA = [GAMES[0], GAMES[2], GAMES[4], GAMES[6]]
+const columnA = [GAMES[0], GAMES[2], GAMES[4], GAMES[1]]
 const columnB = [GAMES[1], GAMES[3], GAMES[5], GAMES[0]]
-const columnC = [GAMES[5], GAMES[6], GAMES[1], GAMES[2]]
+const columnC = [GAMES[5], GAMES[4], GAMES[2], GAMES[3]]
 
 function ShowcaseColumn({
   items,

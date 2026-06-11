@@ -1,6 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
 import { GAMES } from "@/lib/site-data"
 
 export function Games() {
@@ -30,13 +32,13 @@ export function Games() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.55, delay: (i % 3) * 0.08 }}
-              className="group overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-primary/50"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:border-primary/50"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={game.image || "/placeholder.svg"}
-                  alt={`${game.title} key art`}
+                  alt={`${game.title} official icon`}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -45,9 +47,16 @@ export function Games() {
                   {game.category}
                 </span>
               </div>
-              <div className="p-5">
+              <div className="flex flex-1 flex-col p-5">
                 <h3 className="font-heading text-lg font-bold tracking-tight">{game.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{game.blurb}</p>
+                <Link
+                  href={`/games/${game.slug}`}
+                  className="group/btn mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
+                >
+                  View Game
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
+                </Link>
               </div>
             </motion.article>
           ))}

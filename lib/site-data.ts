@@ -96,50 +96,185 @@ export const PARTNERS = [
   "Supersonic",
 ]
 
-export const GAMES = [
+export type Game = {
+  slug: string
+  title: string
+  image: string
+  category: string
+  blurb: string
+  tagline: string
+  tiktokUrl: string
+  screenshots: string[]
+  overview: string[]
+  features: string[]
+}
+
+export const GAMES: Game[] = [
   {
+    slug: "idle-lumber-empire",
     title: "Idle Lumber Empire",
     image: "/games/idle-lumber-empire.png",
     category: "Idle Tycoon",
-    blurb: "A timber empire builder driving deep idle-loop retention.",
+    blurb: "Build a booming timber business and watch your lumber empire grow.",
+    tagline: "Chop, automate, and build a booming timber empire.",
+    tiktokUrl: "https://www.tiktok.com/minis/bmvfS41stgj",
+    screenshots: [
+      "/games/screenshots/idle-lumber-empire-1.png",
+      "/games/screenshots/idle-lumber-empire-2.png",
+      "/games/screenshots/idle-lumber-empire-3.png",
+      "/games/screenshots/idle-lumber-empire-4.png",
+    ],
+    overview: [
+      "Welcome to Idle Lumber Empire, the ultimate idle tycoon game where you build and manage your very own timber business from the ground up. Start with a single sawmill and grow it into a massive lumber empire that runs around the clock.",
+      "Chop trees, process logs, automate your sawmills, and hire workers to keep production flowing even while you are away. Reinvest your profits to unlock powerful upgrades, new machines, and bigger factories.",
+      "With satisfying idle progression and endless upgrades, Idle Lumber Empire is the perfect game to play in quick sessions or for hours at a time.",
+    ],
+    features: [
+      "Addictive idle gameplay with offline earnings",
+      "Hundreds of upgrades and automation tiers",
+      "Expand from a single sawmill to a global empire",
+      "Satisfying production and management loops",
+    ],
   },
   {
-    title: "Cat Hero",
-    image: "/games/cat-hero.png",
-    category: "Casual Action",
-    blurb: "Charming hero action with broad mass-market appeal.",
+    slug: "idle-light-city",
+    title: "Idle Light City",
+    image: "/games/idle-light-city.png",
+    category: "Idle Simulation",
+    blurb: "Light up the city and power a glowing metropolis from the ground up.",
+    tagline: "Power up the city and watch it come to life.",
+    tiktokUrl: "https://www.tiktok.com/minis/ZJ02Wg2Bmej",
+    screenshots: [
+      "/games/screenshots/idle-light-city-1.png",
+      "/games/screenshots/idle-light-city-2.png",
+      "/games/screenshots/idle-light-city-3.png",
+      "/games/screenshots/idle-light-city-4.png",
+    ],
+    overview: [
+      "Idle Light City is a charming idle simulation game where you bring an entire city to life by powering up its buildings, streets, and landmarks one light at a time. Tap to generate energy and watch the metropolis glow.",
+      "Invest in power plants, upgrade your infrastructure, and unlock new districts as your city expands. The more you grow, the brighter your city shines — even while you are offline.",
+      "With its cozy art style and relaxing idle progression, Idle Light City is the perfect escape for fans of city-building and tycoon games.",
+    ],
+    features: [
+      "Relaxing idle city-building gameplay",
+      "Light up buildings and unlock new districts",
+      "Offline energy generation and progression",
+      "Cheerful, colorful art style",
+    ],
   },
   {
-    title: "Global City",
-    image: "/games/global-city.png",
-    category: "Simulation",
-    blurb: "A city-builder sim optimized for social, in-feed play.",
+    slug: "idle-aqua-park",
+    title: "Idle Aqua Park",
+    image: "/games/idle-aqua-park.png",
+    category: "Idle Tycoon",
+    blurb: "Design wild water slides and run the most popular aqua park in town.",
+    tagline: "Build the wildest water park and ride to riches.",
+    tiktokUrl: "https://www.tiktok.com/minis/hnIqSV2tafj",
+    screenshots: [
+      "/games/screenshots/idle-aqua-park-1.png",
+      "/games/screenshots/idle-aqua-park-2.png",
+      "/games/screenshots/idle-aqua-park-3.png",
+      "/games/screenshots/idle-aqua-park-4.png",
+    ],
+    overview: [
+      "Idle Aqua Park is a splashing idle tycoon game where you design, build, and manage your very own water park. Construct thrilling slides, attract crowds of visitors, and turn your park into the hottest summer destination.",
+      "Upgrade your slides to make them faster and more exciting, add new attractions, and watch happy guests pour in. Earn money even while you are away and reinvest it to expand your aqua empire.",
+      "Easy to pick up and endlessly fun, Idle Aqua Park delivers the perfect blend of building, management, and idle progression.",
+    ],
+    features: [
+      "Build and upgrade thrilling water slides",
+      "Attract and manage crowds of visitors",
+      "Idle earnings that keep growing offline",
+      "Bright, fun summer theme",
+    ],
   },
   {
+    slug: "divineko",
     title: "Divineko",
     image: "/games/divineko.png",
     category: "Idle Clicker",
-    blurb: "A magical clicker with viral, shareable progression.",
+    blurb: "Tap into magic with an adorable celestial cat clicker adventure.",
+    tagline: "Summon magic with your divine little cat.",
+    tiktokUrl: "https://www.tiktok.com/minis/R19IBGk02dj",
+    screenshots: [
+      "/games/screenshots/divineko-1.png",
+      "/games/screenshots/divineko-2.png",
+      "/games/screenshots/divineko-3.png",
+      "/games/screenshots/divineko-4.png",
+    ],
+    overview: [
+      "Divineko is a magical idle clicker game starring an adorable celestial cat with mystical powers. Tap to channel divine energy, cast spells, and unlock a universe of cosmic wonders.",
+      "Collect enchanting upgrades, summon magical companions, and grow your power across a dreamy, star-filled world. With every tap, your divine kitty grows stronger and your magical journey expands.",
+      "Soothing visuals, satisfying progression, and charming characters make Divineko the perfect relaxing clicker experience.",
+    ],
+    features: [
+      "Magical tap-to-progress clicker gameplay",
+      "Adorable celestial cat and companions",
+      "Dreamy, star-filled art style",
+      "Endless upgrades and cosmic rewards",
+    ],
   },
   {
-    title: "Trash Tycoon",
-    image: "/games/trash-tycoon.png",
-    category: "Idle Tycoon",
-    blurb: "An eco-recycling tycoon with addictive economy loops.",
+    slug: "patrol-officer",
+    title: "Patrol Officer",
+    image: "/games/patrol-officer.png",
+    category: "Simulation",
+    blurb: "Enforce the law, run checkpoints, and keep the streets safe.",
+    tagline: "Uphold the law one checkpoint at a time.",
+    tiktokUrl: "https://www.tiktok.com/minis/cX3hdZtmNfj",
+    screenshots: [
+      "/games/screenshots/patrol-officer-1.png",
+      "/games/screenshots/patrol-officer-2.png",
+      "/games/screenshots/patrol-officer-3.png",
+      "/games/screenshots/patrol-officer-4.png",
+    ],
+    overview: [
+      "Patrol Officer puts you in the shoes of a dedicated law enforcement officer tasked with keeping the streets safe. Run checkpoints, inspect drivers, conduct breathalyzer tests, and catch rule-breakers in the act.",
+      "Make quick decisions, follow procedure, and rise through the ranks as you handle increasingly challenging situations. Every shift brings new cases, suspects, and surprises.",
+      "With engaging simulation gameplay and a touch of humor, Patrol Officer offers a fresh and entertaining take on the life of a patrol cop.",
+    ],
+    features: [
+      "Immersive law-enforcement simulation",
+      "Run checkpoints and inspect drivers",
+      "Make fast decisions and rise in rank",
+      "Varied cases and challenging scenarios",
+    ],
   },
   {
-    title: "Golden Farm",
-    image: "/games/golden-farm.png",
-    category: "Farm Simulation",
-    blurb: "A warm farming sim built for long-term engagement.",
-  },
-  {
-    title: "Berry Factory Tycoon",
-    image: "/games/berry-factory-tycoon.png",
-    category: "Idle Factory",
-    blurb: "A satisfying factory tycoon tuned for fast sessions.",
+    slug: "pawn-to-do",
+    title: "Pawn To Do",
+    image: "/games/pawn-to-do.png",
+    category: "Narrative Puzzle",
+    blurb: "Unravel a gripping story of secrets, choices, and redemption.",
+    tagline: "Every choice writes the next chapter.",
+    tiktokUrl: "https://www.tiktok.com/minis/F1IDoxyJqgj",
+    screenshots: [
+      "/games/screenshots/pawn-to-do-1.png",
+      "/games/screenshots/pawn-to-do-2.png",
+      "/games/screenshots/pawn-to-do-3.png",
+      "/games/screenshots/pawn-to-do-4.png",
+    ],
+    overview: [
+      "Pawn To Do is a gripping narrative puzzle game where your choices shape an unfolding story of secrets, betrayal, and redemption. Step into a cinematic world full of intrigue and complex characters.",
+      "Solve clever puzzles, uncover hidden truths, and make decisions that change the course of the story. Every chapter draws you deeper into a web of mystery and emotion.",
+      "With stunning visuals and a story-driven experience, Pawn To Do keeps you hooked from the first scene to the final reveal.",
+    ],
+    features: [
+      "Choice-driven cinematic storytelling",
+      "Clever puzzles woven into the plot",
+      "Stunning, dramatic visuals",
+      "Multiple twists and emotional moments",
+    ],
   },
 ]
+
+export function getGame(slug: string): Game | undefined {
+  return GAMES.find((g) => g.slug === slug)
+}
+
+export function getRelatedGames(slug: string, count = 3): Game[] {
+  return GAMES.filter((g) => g.slug !== slug).slice(0, count)
+}
 
 export const INSIGHTS = [
   {
@@ -229,7 +364,6 @@ export const OFFICES = [
 ]
 
 export const CONTACTS = [
-  { label: "Business Development", email: "partnership@esigame.com" },
-  { label: "Developer Partnerships", email: "developers@esigame.com" },
-  { label: "Publishing Opportunities", email: "publishing@esigame.com" },
+  { label: "Business Development", email: "bd@esigame.com" },
+  { label: "Developer Partnerships", email: "dev@esigame.com" },
 ]
