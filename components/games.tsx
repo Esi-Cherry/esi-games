@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MapPin, Layers, Monitor } from "lucide-react"
 import { GAMES } from "@/lib/site-data"
 
 export function Games() {
@@ -18,8 +17,8 @@ export function Games() {
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            From idle tycoons to casual hits — published and operated across China and global
-            platforms.
+            A track record of casual and idle hits — published, marketed, and operated for the
+            TikTok generation.
           </p>
         </div>
 
@@ -48,20 +47,7 @@ export function Games() {
               </div>
               <div className="p-5">
                 <h3 className="font-heading text-lg font-bold tracking-tight">{game.title}</h3>
-                <div className="mt-4 flex flex-col gap-2 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-2">
-                    <Monitor className="h-4 w-4 text-primary" />
-                    {game.platform}
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-primary" />
-                    {game.region}
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <Layers className="h-4 w-4 text-primary" />
-                    {game.category}
-                  </span>
-                </div>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{game.blurb}</p>
               </div>
             </motion.article>
           ))}

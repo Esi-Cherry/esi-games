@@ -33,10 +33,10 @@ export function Partners() {
           className="mx-auto max-w-2xl text-center"
         >
           <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Featured Partners
+            Publishing Partners
           </span>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl">
-            Trusted by Global Developers
+            Trusted by leading developers and studios
           </h2>
         </motion.div>
       </div>

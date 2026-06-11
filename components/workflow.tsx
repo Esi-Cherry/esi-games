@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion"
 import { ArrowDown, ArrowRight } from "lucide-react"
-import { ECOSYSTEM_STEPS } from "@/lib/site-data"
+import { WORKFLOW_STEPS } from "@/lib/site-data"
 
 export function Workflow() {
   return (
-    <section id="ecosystem" className="relative overflow-hidden border-t border-border py-20 lg:py-28">
+    <section id="process" className="relative overflow-hidden border-t border-border py-20 lg:py-28">
       <div
         className="pointer-events-none absolute right-0 top-1/4 h-[500px] w-[500px] rounded-full opacity-20 blur-[130px]"
         style={{ background: "radial-gradient(circle, hsl(var(--accent)) 0%, transparent 70%)" }}
@@ -15,20 +15,20 @@ export function Workflow() {
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Publishing Ecosystem
+            What We Do
           </span>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl">
-            One pipeline, every platform that matters
+            A premium publishing pipeline, end to end
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground text-pretty">
-            We take your game from handoff to compounding revenue across China&apos;s most important
-            distribution surfaces.
+            We take your game from first handoff to compounding revenue — every step engineered for
+            the TikTok Mini Games ecosystem.
           </p>
         </div>
 
         <div className="mt-16">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {ECOSYSTEM_STEPS.map((step, i) => (
+            {WORKFLOW_STEPS.map((step, i) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, y: 24 }}
@@ -47,7 +47,7 @@ export function Workflow() {
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{step.desc}</p>
                 </div>
 
-                {i < ECOSYSTEM_STEPS.length - 1 && (
+                {i < WORKFLOW_STEPS.length - 1 && (
                   <>
                     <span className="absolute -right-3 top-1/2 hidden -translate-y-1/2 text-primary lg:block [&:nth-child(4n)]:hidden">
                       {(i + 1) % 4 !== 0 ? <ArrowRight className="h-5 w-5" /> : null}
@@ -62,8 +62,7 @@ export function Workflow() {
             <ArrowDown className="h-5 w-5 shrink-0 text-primary" />
             <p className="text-sm font-medium text-foreground sm:text-base">
               The result: sustained, optimized revenue growth across the entire game lifecycle.
-            </p>
-          </div>
+            </p>          </div>
         </div>
       </div>
     </section>

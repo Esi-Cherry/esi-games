@@ -13,8 +13,8 @@ export function Footer() {
               <span className="font-heading text-lg font-bold tracking-tight">Esigame</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Global game publisher specializing in China publishing, TikTok, WeChat, and Douyin
-              Mini Games, and native mobile titles.
+              Global game publisher powering the next generation of TikTok Mini Games — from
+              publishing and creator marketing to user acquisition and LiveOps.
             </p>
           </div>
 
@@ -37,7 +37,6 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-foreground">Offices</h4>
             <ul className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground">
-              <li>Beijing — Headquarters</li>
               <li>Singapore — APAC Hub</li>
               <li>Los Angeles — Americas</li>
             </ul>
@@ -49,7 +48,7 @@ export function Footer() {
             © 2026 Esigame. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
-            Founded 2019 · Beijing · Singapore · Los Angeles
+            Global TikTok Mini Games Publisher · Singapore · Los Angeles
           </p>
         </div>
       </div>

@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 import { Building2, Users, Award } from "lucide-react"
 
 const HIGHLIGHTS = [
-  { icon: Building2, title: "HQ in China", desc: "With offices in Singapore and the United States." },
-  { icon: Users, title: "Industry Veterans", desc: "Founded by leaders from Sina Games and Yodo1." },
-  { icon: Award, title: "Since 2019", desc: "Six+ years building publishing infrastructure." },
+  { icon: Building2, title: "TikTok-Native Publisher", desc: "Built around the TikTok Mini Games ecosystem from day one." },
+  { icon: Users, title: "Global Publishing Team", desc: "Experienced professionals across multiple markets." },
+  { icon: Award, title: "75+ Games Published", desc: "Six+ years and millions of players reached worldwide." },
 ]
 
 export function About() {
@@ -30,15 +30,16 @@ export function About() {
               transition={{ duration: 0.6 }}
               className="mt-3 font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl"
             >
-              Built by veterans. Trusted by global studios.
+              Built for developers. Trusted worldwide.
             </motion.h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-pretty">
-              Esigame is a global game publisher with headquarters in China and offices in Singapore
-              and the United States. Founded by industry veterans from Sina Games and Yodo1.
+              Esigame is a global publisher helping developers build successful businesses on TikTok
+              Mini Games. We combine publishing expertise, performance marketing, creator
+              partnerships, and long-term operations to maximize growth.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground text-pretty">
-              We focus on bringing high-quality mobile games and mini games to players worldwide
-              through data-driven publishing, creative marketing, and long-term operations.
+              We act as an extension of your studio — handling strategy, localization, marketing, and
+              live operations so you can focus on building games players love.
             </p>
           </div>
 

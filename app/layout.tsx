@@ -12,24 +12,24 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: "Esigame | China Publishing & TikTok Mini Game Experts",
+  title: "Esigame | Powering the Next Generation of TikTok Mini Games",
   description:
-    "Esigame is a global game publisher specializing in China publishing, TikTok, WeChat, and Douyin Mini Games, and native mobile games. 75+ published titles, 100M+ RMB annual revenue, 6+ years of industry experience.",
+    "Esigame is a global game publisher focused on TikTok Mini Games. We help developers launch, grow, and scale through publishing, live operations, influencer marketing, and monetization optimization. 75+ games published, 6+ years of experience.",
   keywords: [
-    "game publishing",
-    "China game publishing",
     "TikTok Mini Games",
-    "WeChat Mini Games",
-    "Douyin Mini Games",
+    "TikTok Mini Games publisher",
+    "game publishing",
     "mobile game publisher",
+    "creator marketing",
     "user acquisition",
     "LiveOps",
+    "game monetization",
     "Esigame",
   ],
   openGraph: {
-    title: "Esigame | China Publishing & TikTok Mini Game Experts",
+    title: "Esigame | Powering the Next Generation of TikTok Mini Games",
     description:
-      "Helping global developers enter China's mobile and mini game market. 75+ published games, 100M+ RMB annual revenue.",
+      "Global publisher helping developers launch, grow, and scale successful TikTok Mini Games worldwide. 75+ games published.",
     type: "website",
   },
   generator: "v0.app",

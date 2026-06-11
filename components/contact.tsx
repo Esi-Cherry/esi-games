@@ -25,8 +25,8 @@ export function Contact() {
               Let&apos;s build your next hit, together
             </h2>
             <p className="mt-4 max-w-md text-lg leading-relaxed text-muted-foreground text-pretty">
-              Whether your game is ready to publish or you&apos;re exploring the China opportunity,
-              our team is ready to talk.
+              Whether your game is ready to publish or you&apos;re exploring TikTok Mini Games, our
+              business development team is ready to talk.
             </p>
 
             <div className="mt-10 flex flex-col gap-3">
@@ -89,12 +89,12 @@ export function Contact() {
                     id="interest"
                     className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                   >
-                    <option>China Publishing</option>
-                    <option>TikTok Mini Games</option>
-                    <option>WeChat Mini Games</option>
-                    <option>Douyin Mini Games</option>
-                    <option>Native Mobile Publishing</option>
+                    <option>Publish My Game</option>
+                    <option>TikTok Mini Game Integration</option>
+                    <option>Creator Marketing</option>
                     <option>User Acquisition</option>
+                    <option>Monetization & LiveOps</option>
+                    <option>Other Partnership</option>
                   </select>
                 </div>
                 <div>

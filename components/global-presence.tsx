@@ -1,15 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps"
+import { ComposableMap, Geographies, Geography, Marker, Line } from "react-simple-maps"
+import { OFFICES } from "@/lib/site-data"
 
 const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
-
-const OFFICES = [
-  { city: "Beijing", role: "Global Headquarters", coordinates: [116.4, 39.9] as [number, number], note: "Publishing, LiveOps & platform relations" },
-  { city: "Singapore", role: "APAC Hub", coordinates: [103.8, 1.35] as [number, number], note: "Partnerships & developer relations" },
-  { city: "Los Angeles", role: "Americas Office", coordinates: [-118.2, 34.05] as [number, number], note: "Western developer cooperation & UA" },
-]
 
 export function GlobalPresence() {
   return (
@@ -20,11 +15,11 @@ export function GlobalPresence() {
             Global Presence
           </span>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl">
-            Global Reach, Local Expertise
+            Global Reach. TikTok Focus.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground text-pretty">
-            Serving developers worldwide while delivering deep localization and operational
-            excellence in China.
+            A worldwide team serving developers across markets — with hubs bridging APAC and the
+            Americas.
           </p>
         </div>
 
@@ -60,6 +55,17 @@ export function GlobalPresence() {
                   ))
                 }
               </Geographies>
+
+              <Line
+                from={OFFICES[0].coordinates}
+                to={OFFICES[1].coordinates}
+                stroke="hsl(168 78% 48%)"
+                strokeWidth={1.5}
+                strokeLinecap="round"
+                strokeDasharray="5 5"
+                style={{ opacity: 0.7 }}
+              />
+
               {OFFICES.map((office) => (
                 <Marker key={office.city} coordinates={office.coordinates}>
                   <circle r={10} fill="hsl(168 78% 48% / 0.25)">

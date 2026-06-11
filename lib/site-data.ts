@@ -1,51 +1,89 @@
 export const NAV_LINKS = [
+  { label: "Why TikTok", href: "#why-tiktok" },
+  { label: "What We Do", href: "#process" },
   { label: "Why Esigame", href: "#why" },
-  { label: "Ecosystem", href: "#ecosystem" },
   { label: "Games", href: "#games" },
-  { label: "Global", href: "#global" },
-  { label: "About", href: "#about" },
+  { label: "Insights", href: "#insights" },
   { label: "Contact", href: "#contact" },
 ]
 
 export const HERO_STATS = [
-  { value: "75+", label: "Published Games" },
-  { value: "100M+", label: "RMB Annual Revenue" },
-  { value: "6+", label: "Years Experience" },
-  { value: "3", label: "Global Offices" },
+  { value: 75, suffix: "+", label: "Published Games" },
+  { value: 6, suffix: "+", label: "Years of Experience" },
+  { value: null, display: "Millions", label: "of Players Reached" },
+  { value: null, display: "Global", label: "Publishing Network" },
+]
+
+export const WHY_TIKTOK = [
+  {
+    title: "Massive User Reach",
+    body: "Over a billion monthly users discover and play directly inside the TikTok ecosystem — no install friction, no funnel drop-off.",
+    stat: "1B+",
+    statLabel: "Monthly active users",
+  },
+  {
+    title: "Viral Discovery",
+    body: "Games surface through the For You feed, turning a single share into exponential, algorithm-driven distribution.",
+    stat: "∞",
+    statLabel: "Organic reach potential",
+  },
+  {
+    title: "Creator-Driven Growth",
+    body: "Creators turn gameplay into content, fueling authentic acquisition that traditional ad networks can't match.",
+    stat: "10x",
+    statLabel: "Creator-led conversion",
+  },
+  {
+    title: "Social Gameplay",
+    body: "Native social mechanics keep players competing, sharing, and returning inside the feed they already live in.",
+    stat: "Native",
+    statLabel: "In-feed engagement",
+  },
+  {
+    title: "Fast Iteration Cycles",
+    body: "Instant publishing and real-time signals let us test, learn, and optimize at the speed of the platform.",
+    stat: "Days",
+    statLabel: "Not months to iterate",
+  },
+]
+
+export const WORKFLOW_STEPS = [
+  { title: "Game Developer", desc: "You bring a great game and a great team." },
+  { title: "Publishing Strategy", desc: "Market fit, positioning, and a launch roadmap." },
+  { title: "Localization", desc: "Language, culture, and store optimization per region." },
+  { title: "TikTok Integration", desc: "Native TikTok Mini Game SDK and platform setup." },
+  { title: "Creator Marketing", desc: "Influencer campaigns built for viral reach." },
+  { title: "User Acquisition", desc: "Data-driven paid growth with strict ROAS targets." },
+  { title: "LiveOps", desc: "Always-on events, content, and economy tuning." },
+  { title: "Revenue Growth", desc: "Compounding, optimized, long-term monetization." },
 ]
 
 export const WHY_CARDS = [
   {
-    title: "China Expertise",
-    body: "Deep understanding of Chinese players, distribution channels, and monetization behavior built over six years on the ground.",
-    tag: "Market Intelligence",
+    title: "TikTok Expertise",
+    body: "We focus exclusively on TikTok Mini Games and understand the ecosystem deeply — from SDK to the For You algorithm.",
+    tag: "Platform Focus",
   },
   {
-    title: "TikTok Mini Games",
-    body: "One of the earliest publishers focused on TikTok Mini Games, with a proven UA and creative playbook for the format.",
-    tag: "Emerging Platform",
+    title: "Creator Marketing",
+    body: "Partnerships with creators and communities to accelerate growth through authentic, viral content.",
+    tag: "Viral Growth",
   },
   {
-    title: "WeChat Mini Games",
-    body: "Extensive experience with China's largest mini game ecosystem, from compliance to retention-driven LiveOps.",
-    tag: "Scale Ecosystem",
+    title: "Performance Marketing",
+    body: "Data-driven user acquisition and continuous optimization tuned to maximize return on ad spend.",
+    tag: "Paid Acquisition",
   },
   {
     title: "Long-Term Operations",
-    body: "Data-driven LiveOps and revenue optimization that compound results across the full lifecycle of every title.",
+    body: "LiveOps, monetization tuning, and player retention that compound results across a game's full lifecycle.",
     tag: "Sustained Growth",
   },
-]
-
-export const ECOSYSTEM_STEPS = [
-  { title: "Developer", desc: "You ship a great game." },
-  { title: "Localization", desc: "Culturalization, language, and store optimization." },
-  { title: "UA & Marketing", desc: "Performance media and influencer campaigns." },
-  { title: "TikTok Mini Games", desc: "Native publishing on the fastest-growing format." },
-  { title: "WeChat Mini Games", desc: "Reach across China's largest social ecosystem." },
-  { title: "Douyin Mini Games", desc: "Tap into Douyin's enormous engaged audience." },
-  { title: "Native Apps", desc: "iOS and Android distribution across regions." },
-  { title: "Revenue Growth", desc: "Compounding, optimized, long-term monetization." },
+  {
+    title: "Global Team",
+    body: "Experienced publishing professionals across multiple markets, working as an extension of your studio.",
+    tag: "Worldwide",
+  },
 ]
 
 export const PARTNERS = [
@@ -56,71 +94,96 @@ export const PARTNERS = [
   "Ketchapp",
   "MY.GAMES",
   "Supersonic",
-  "Joygame",
 ]
 
 export const GAMES = [
   {
     title: "Idle Lumber Empire",
     image: "/games/idle-lumber-empire.png",
-    platform: "WeChat · Douyin",
-    region: "China",
     category: "Idle Tycoon",
+    blurb: "A timber empire builder driving deep idle-loop retention.",
   },
   {
     title: "Cat Hero",
     image: "/games/cat-hero.png",
-    platform: "Native iOS · Android",
-    region: "Global",
     category: "Casual Action",
+    blurb: "Charming hero action with broad mass-market appeal.",
   },
   {
     title: "Global City",
     image: "/games/global-city.png",
-    platform: "TikTok Mini Game",
-    region: "Global",
     category: "Simulation",
+    blurb: "A city-builder sim optimized for social, in-feed play.",
   },
   {
     title: "Divineko",
     image: "/games/divineko.png",
-    platform: "Native iOS · Android",
-    region: "Global",
     category: "Idle Clicker",
+    blurb: "A magical clicker with viral, shareable progression.",
   },
   {
     title: "Trash Tycoon",
     image: "/games/trash-tycoon.png",
-    platform: "WeChat · TikTok",
-    region: "China",
     category: "Idle Tycoon",
+    blurb: "An eco-recycling tycoon with addictive economy loops.",
   },
   {
     title: "Golden Farm",
     image: "/games/golden-farm.png",
-    platform: "WeChat Mini Game",
-    region: "China",
     category: "Farm Simulation",
+    blurb: "A warm farming sim built for long-term engagement.",
   },
   {
     title: "Berry Factory Tycoon",
     image: "/games/berry-factory-tycoon.png",
-    platform: "Douyin Mini Game",
-    region: "China",
     category: "Idle Factory",
+    blurb: "A satisfying factory tycoon tuned for fast sessions.",
+  },
+]
+
+export const INSIGHTS = [
+  {
+    tag: "Trends",
+    title: "What's Next for TikTok Mini Games",
+    body: "The signals shaping the fastest-growing games platform — and where the next breakout hits will come from.",
+    read: "6 min read",
+  },
+  {
+    tag: "Creator Economy",
+    title: "Turning Creators into Growth Engines",
+    body: "How authentic creator content outperforms paid media for discovery and long-term retention.",
+    read: "5 min read",
+  },
+  {
+    tag: "Publishing",
+    title: "A Modern Publishing Playbook",
+    body: "From soft launch to scale — the strategy framework we use to de-risk every release.",
+    read: "8 min read",
+  },
+  {
+    tag: "User Acquisition",
+    title: "Scaling UA Without Burning Budget",
+    body: "Data-driven acquisition tactics that protect ROAS while compounding installs.",
+    read: "7 min read",
+  },
+  {
+    tag: "Monetization",
+    title: "Designing Healthy Game Economies",
+    body: "Balancing IAP and ads to maximize lifetime value without hurting the player experience.",
+    read: "6 min read",
   },
 ]
 
 export const SERVICES = [
   {
     title: "User Acquisition",
-    body: "Performance marketing across paid social, networks, and emerging channels with rigorous ROAS targets.",
+    body: "Performance marketing across paid social and emerging channels with rigorous ROAS targets.",
     metric: "1.4B+",
     metricLabel: "Ad impressions managed",
   },
   {
-    title: "Influencer Marketing",
-    body: "Creator partnerships and viral content engines built for TikTok, Douyin, and global social platforms.",
+    title: "Creator Marketing",
+    body: "Creator partnerships and viral content engines built natively for TikTok.",
     metric: "5,000+",
     metricLabel: "Creator collaborations",
   },
@@ -138,13 +201,13 @@ export const SERVICES = [
   },
   {
     title: "Community Management",
-    body: "Localized community building and moderation across Chinese and global player bases.",
+    body: "Localized community building and moderation across global player bases.",
     metric: "24/7",
     metricLabel: "Multi-region coverage",
   },
   {
     title: "Platform Compliance",
-    body: "Full regulatory, ISBN, and platform certification handling for the China market.",
+    body: "Full TikTok platform certification, policy, and integration handling end to end.",
     metric: "100%",
     metricLabel: "Compliance track record",
   },
@@ -152,27 +215,21 @@ export const SERVICES = [
 
 export const OFFICES = [
   {
-    city: "Beijing",
-    role: "Headquarters",
-    coords: { x: 78, y: 38 },
-    note: "Publishing, LiveOps, and platform relations.",
-  },
-  {
     city: "Singapore",
     role: "APAC Hub",
-    coords: { x: 74, y: 62 },
+    coordinates: [103.8, 1.35] as [number, number],
     note: "Regional partnerships and developer relations.",
   },
   {
     city: "Los Angeles",
     role: "Americas Office",
-    coords: { x: 16, y: 42 },
-    note: "Western developer cooperation and UA.",
+    coordinates: [-118.2, 34.05] as [number, number],
+    note: "Western developer cooperation and user acquisition.",
   },
 ]
 
 export const CONTACTS = [
   { label: "Business Development", email: "partnership@esigame.com" },
-  { label: "Developer Cooperation", email: "bd@esigame.com" },
-  { label: "TikTok Mini Games", email: "tiktok@esigame.com" },
+  { label: "Developer Partnerships", email: "developers@esigame.com" },
+  { label: "Publishing Opportunities", email: "publishing@esigame.com" },
 ]

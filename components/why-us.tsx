@@ -1,10 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Globe2, Sparkles, MessageCircle, LineChart } from "lucide-react"
+import { Music2, Megaphone, LineChart, RefreshCw, Globe2 } from "lucide-react"
 import { WHY_CARDS } from "@/lib/site-data"
 
-const ICONS = [Globe2, Sparkles, MessageCircle, LineChart]
+const ICONS = [Music2, Megaphone, LineChart, RefreshCw, Globe2]
 
 export function WhyUs() {
   return (
@@ -26,15 +26,15 @@ export function WhyUs() {
             transition={{ duration: 0.6 }}
             className="mt-3 font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl"
           >
-            A publisher built specifically for the China opportunity
+            A publisher built exclusively for TikTok Mini Games
           </motion.h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground text-pretty">
-            We combine local market mastery with global operational discipline to turn great games
-            into durable, high-revenue franchises.
+            We pair deep platform expertise with creator-led marketing and disciplined operations to
+            turn great games into lasting franchises.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {WHY_CARDS.map((card, i) => {
             const Icon = ICONS[i]
             return (

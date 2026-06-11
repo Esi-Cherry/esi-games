@@ -53,7 +53,7 @@ export function Navbar() {
             href="#contact"
             className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
           >
-            Publish With Us
+            Publish Your Game
           </a>
         </div>
 
@@ -92,7 +92,7 @@ export function Navbar() {
                   onClick={() => setOpen(false)}
                   className="block rounded-full bg-primary px-5 py-2.5 text-center text-sm font-semibold text-primary-foreground"
                 >
-                  Publish With Us
+                  Publish Your Game
                 </a>
               </li>
             </ul>

@@ -1,8 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Play } from "lucide-react"
+import { ArrowRight, CalendarDays } from "lucide-react"
 import { HERO_STATS, GAMES } from "@/lib/site-data"
+import { CountUp } from "@/components/count-up"
 
 const columnA = [GAMES[0], GAMES[2], GAMES[4], GAMES[6]]
 const columnB = [GAMES[1], GAMES[3], GAMES[5], GAMES[0]]
@@ -63,7 +64,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-medium text-muted-foreground"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Global Game Publisher · Founded 2019
+            Global TikTok Mini Games Publisher
           </motion.div>
 
           <motion.h1
@@ -72,7 +73,8 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.05 }}
             className="mt-6 font-heading text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl"
           >
-            China Publishing & <span className="text-primary">TikTok Mini Game</span> Experts
+            Powering the Next Generation of{" "}
+            <span className="text-primary">TikTok Mini Games</span>
           </motion.h1>
 
           <motion.p
@@ -81,8 +83,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty"
           >
-            Helping global developers enter China&apos;s mobile and mini game market — across TikTok,
-            WeChat, Douyin, and native platforms.
+            We help game developers launch, grow, and scale successful TikTok Mini Games worldwide
+            through publishing, live operations, influencer marketing, and monetization
+            optimization.
           </motion.p>
 
           <motion.div
@@ -95,15 +98,15 @@ export function Hero() {
               href="#contact"
               className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
             >
-              Publish With Us
+              Publish Your Game
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
-              href="#games"
+              href="#contact"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
             >
-              <Play className="h-4 w-4 text-primary" />
-              View Portfolio
+              <CalendarDays className="h-4 w-4 text-primary" />
+              Schedule a Meeting
             </a>
           </motion.div>
 
@@ -116,7 +119,11 @@ export function Hero() {
             {HERO_STATS.map((stat) => (
               <div key={stat.label}>
                 <dt className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                  {stat.value}
+                  {stat.value !== null ? (
+                    <CountUp value={stat.value} suffix={stat.suffix} />
+                  ) : (
+                    stat.display
+                  )}
                 </dt>
                 <dd className="mt-1 text-xs leading-snug text-muted-foreground">{stat.label}</dd>
               </div>
