@@ -1,45 +1,60 @@
-import { CheckCircle2 } from "lucide-react"
+"use client"
 
-const lookingFor = [
-  "Casual, idle, simulation, and tycoon games with proven retention metrics",
-  "Hybrid-casual titles with strong early funnel and monetization potential",
-  "Games suitable for emerging platforms such as TikTok Mini Games",
-  "Studios open to collaborative, data-driven optimization",
-  "Titles with global appeal and culturally adaptable content",
-  "Prototypes or soft-launched games ready for scaling",
-]
+import { motion } from "framer-motion"
+import { PARTNERS } from "@/lib/site-data"
+
+function LogoRow({ items }: { items: string[] }) {
+  const doubled = [...items, ...items]
+  return (
+    <div className="flex w-max gap-4">
+      {doubled.map((name, i) => (
+        <div
+          key={`${name}-${i}`}
+          className="flex h-20 min-w-[200px] items-center justify-center rounded-xl border border-border bg-card px-8"
+        >
+          <span className="font-heading text-xl font-bold tracking-tight text-muted-foreground">
+            {name}
+          </span>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export function Partners() {
   return (
-    <section id="partners" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-          <div>
-            <p className="mb-3 text-sm font-medium uppercase tracking-widest text-accent">
-              What We Look For
-            </p>
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
-              Is Your Game a Good Fit?
-            </h2>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
-              We partner with studios and independent developers who share our
-              commitment to quality, data-driven growth, and long-term
-              collaboration.
-            </p>
-          </div>
+    <section className="relative border-t border-border py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <span className="text-sm font-semibold uppercase tracking-widest text-primary">
+            Publishing Partners
+          </span>
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl">
+            Trusted by leading developers and studios
+          </h2>
+        </motion.div>
+      </div>
 
-          <div className="rounded-lg border border-border bg-card p-8 lg:p-10">
-            <ul className="flex flex-col gap-5">
-              {lookingFor.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                  <span className="text-sm leading-relaxed text-foreground">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div className="relative mt-14 flex flex-col gap-4 overflow-hidden">
+        <div
+          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent"
+          aria-hidden
+        />
+        <div className="marquee-track">
+          <LogoRow items={PARTNERS} />
+        </div>
+        <div className="marquee-track-rev">
+          <LogoRow items={[...PARTNERS].reverse()} />
         </div>
       </div>
     </section>

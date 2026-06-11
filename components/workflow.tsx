@@ -1,67 +1,68 @@
-const steps = [
-  {
-    number: "01",
-    title: "Discovery & Evaluation",
-    description:
-      "We review your game's core mechanics, market fit, and monetization potential to assess publishing viability.",
-  },
-  {
-    number: "02",
-    title: "Strategy & Planning",
-    description:
-      "Our team develops a tailored go-to-market strategy covering monetization design, UA channels, and platform selection.",
-  },
-  {
-    number: "03",
-    title: "Optimization & Launch",
-    description:
-      "We work closely with your studio to refine the product, integrate analytics, and prepare for a successful launch.",
-  },
-  {
-    number: "04",
-    title: "Scaling & LiveOps",
-    description:
-      "Post-launch, we drive growth through continuous UA optimization, live events, content updates, and data-driven iteration.",
-  },
-]
+"use client"
+
+import { motion } from "framer-motion"
+import { ArrowDown, ArrowRight } from "lucide-react"
+import { WORKFLOW_STEPS } from "@/lib/site-data"
 
 export function Workflow() {
   return (
-    <section id="workflow" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="process" className="relative overflow-hidden border-t border-border py-20 lg:py-28">
+      <div
+        className="pointer-events-none absolute right-0 top-1/4 h-[500px] w-[500px] rounded-full opacity-20 blur-[130px]"
+        style={{ background: "radial-gradient(circle, hsl(var(--accent)) 0%, transparent 70%)" }}
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-accent">
-            Our Workflow
-          </p>
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
-            From Concept to Global Scale
+          <span className="text-sm font-semibold uppercase tracking-widest text-primary">
+            What We Do
+          </span>
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl">
+            A premium publishing pipeline, end to end
           </h2>
-          <p className="mt-4 leading-relaxed text-muted-foreground">
-            A streamlined, transparent publishing process designed to bring
-            your game to market efficiently.
+          <p className="mt-4 text-lg leading-relaxed text-muted-foreground text-pretty">
+            We take your game from first handoff to compounding revenue — every step engineered for
+            the TikTok Mini Games ecosystem.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, index) => (
-            <div key={step.number} className="relative">
-              {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="absolute right-0 top-10 hidden h-px w-8 translate-x-full bg-border lg:block" aria-hidden="true" />
-              )}
-              <div className="rounded-lg border border-border bg-card p-8">
-                <span className="font-heading text-4xl font-bold text-accent/30">
-                  {step.number}
-                </span>
-                <h3 className="mt-4 font-heading text-lg font-semibold text-foreground">
-                  {step.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {step.description}
-                </p>
-              </div>
-            </div>
-          ))}
+        <div className="mt-16">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {WORKFLOW_STEPS.map((step, i) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
+                className="relative"
+              >
+                <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-5">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 font-heading text-sm font-bold text-primary">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="font-heading text-base font-bold tracking-tight">{step.title}</h3>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{step.desc}</p>
+                </div>
+
+                {i < WORKFLOW_STEPS.length - 1 && (
+                  <>
+                    <span className="absolute -right-3 top-1/2 hidden -translate-y-1/2 text-primary lg:block [&:nth-child(4n)]:hidden">
+                      {(i + 1) % 4 !== 0 ? <ArrowRight className="h-5 w-5" /> : null}
+                    </span>
+                  </>
+                )}
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-10 flex items-center justify-center gap-3 rounded-2xl border border-primary/30 bg-primary/5 px-6 py-5 text-center">
+            <ArrowDown className="h-5 w-5 shrink-0 text-primary" />
+            <p className="text-sm font-medium text-foreground sm:text-base">
+              The result: sustained, optimized revenue growth across the entire game lifecycle.
+            </p>          </div>
         </div>
       </div>
     </section>
